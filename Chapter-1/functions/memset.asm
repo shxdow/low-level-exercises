@@ -1,4 +1,3 @@
-
 _memset :
     push edi            ; STOSB changes the value of edi,therefore we have to save it
     mov edi, [esp+16]   ; length
