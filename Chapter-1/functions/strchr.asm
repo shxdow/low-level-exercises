@@ -15,6 +15,7 @@ while:
     jcxz proc_end
     jz while
     xor eax, eax
+    jmp proc_end
 found:
     mov eax,DWORD PTR [edi]
 proc_end:
