@@ -1,5 +1,5 @@
 # Reverse Engineering Exercises 
 All the exercises are from : 
 Practical Reverse Engineering: x86, x64, ARM, Windows Kernel, Reversing Tools, and Obfuscation by Bruce Dang 
-ISBN-10: 1118787315
-ISBN-13: 978-1118787311
+ISBN - 10: 1118787315
+ISBN - 13: 978-1118787311
