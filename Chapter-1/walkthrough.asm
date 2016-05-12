@@ -97,17 +97,3 @@
 97: 5D               pop     ebp                          ;  function epilogue
 98: C2 0C 00         retn    0Ch                          ;  ret
 99:                _DllMain@12 endp
-
-
-typedef struct tagPROCESSENTRY32 {
-  DWORD     dwSize; 			       	  ebp - 130h
-  DWORD     cntUsage; 				      ebp - 12Ch
-  DWORD     th32ProcessID;          ebp - 128h
-  ULONG_PTR th32DefaultHeapID;      ebp - 124h
-  DWORD     th32ModuleID;           ebp - 120h
-  DWORD     cntThreads;             ebp - 11Ch
-  DWORD     th32ParentProcessID;    ebp - 118h
-  LONG      pcPriClassBase;         ebp - 114h
-  DWORD     dwFlags;                ebp - 110h
-  TCHAR     szExeFile[MAX_PATH];    ebp - 10Ch
-} PROCESSENTRY32, *PPROCESSENTRY32
