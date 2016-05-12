@@ -7,7 +7,8 @@ _strlen proc
     repne scasb
     neg ecx
     add ecx,1
+    mov eax, ecx
     mov esp, ebp
     pop ebp
-	ret
+    ret
 _strlen endp
