@@ -1,4 +1,4 @@
-_strcmp proc
+_strlen proc
     push ebp
     mov ebp, esp
     mov edi, [ebp+8]   ; pointer to the string
@@ -10,4 +10,4 @@ _strcmp proc
     mov esp, ebp
     pop ebp
 	ret
-_strcmp endp
+_strlen endp
