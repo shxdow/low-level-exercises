@@ -100,8 +100,8 @@
 
 
 typedef struct tagPROCESSENTRY32 {
-  DWORD     dwSize; 				ebp - 130h
-  DWORD     cntUsage; 				ebp - 12Ch
+  DWORD     dwSize; 			       	  ebp - 130h
+  DWORD     cntUsage; 				      ebp - 12Ch
   DWORD     th32ProcessID;          ebp - 128h
   ULONG_PTR th32DefaultHeapID;      ebp - 124h
   DWORD     th32ModuleID;           ebp - 120h
