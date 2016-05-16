@@ -1,4 +1,6 @@
-    1. This function uses a combination SCAS and STOS to do its work. First, explain what is the type of the [EBP+8] and [EBP+C] in line 1 and 8, respectively. Next, explain what this snippet does.
+    1. This function uses a combination SCAS and STOS to do its work. 
+    First, explain what is the type of the [EBP+8] and [EBP+C] in line 1 and 8, respectively.
+    Next, explain what this snippet does.
 
         01: 8B 7D 08         mov   edi, [ebp+8]
         02: 8B D7            mov   edx, edi
