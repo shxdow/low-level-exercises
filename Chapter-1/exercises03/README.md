@@ -1,4 +1,4 @@
-#
+
     1. Repeat the walk-through by yourself. Draw the stack layout, including parameters and local variables.
 
     2. In the example walk-through, we did a nearly one-to-one translation of the assembly code to C.
