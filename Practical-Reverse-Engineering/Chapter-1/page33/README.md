@@ -11,13 +11,13 @@
 
     4. [ ] Implement the following functions in x86 assembly: strlen, strchr, memcpy, memset, strcmp, strset.
 
-    5. [ ] Decompile the following kernel routines in Windows:
+    5. Decompile the following kernel routines in Windows:
         
-        KeInitializeDpc
-        KeInitializeApc
-        ObFastDereferenceObject (and explain its calling convention)
-        KeInitializeQueue
-        KxWaitForLockChainValid
-        KeReadyThread
-        KiInitializeTSS
-        RtlValidateUnicodeString
+       - [ ] KeInitializeDpc
+       - [ ] KeInitializeApc
+       - [ ] ObFastDereferenceObject (and explain its calling convention)
+       - [ ] KeInitializeQueue
+       - [ ] KxWaitForLockChainValid
+       - [ ] KeReadyThread
+       - [ ] KiInitializeTSS
+       - [ ] RtlValidateUnicodeString
