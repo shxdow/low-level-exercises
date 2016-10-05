@@ -6,7 +6,7 @@ This README would normally document whatever steps are necessary to get your app
 
 * This is a collection of solutions to exercises mostly regarding Assembly and low level things.
 
-<!--
+<!---
 ### How do I get set up? ###
 
 * Summary of set up
