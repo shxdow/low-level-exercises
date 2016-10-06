@@ -12,7 +12,7 @@
 
 5. - [ ] Decompile the following kernel routines in Windows:
 
-     - [ ] KeInitializeDpc
+     - [x] KeInitializeDpc
      - [ ] KeInitializeApc
      - [ ] ObFastDereferenceObject (and explain its calling convention)
      - [ ] KeInitializeQueue
