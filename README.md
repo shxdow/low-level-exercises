@@ -8,20 +8,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* Summary of set up: GNU/Linux,Windows,a debugger, a disassembler and your brain.
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* The following things were used in a way or another:
+1. GNU/Linux
+2. Windows 7 x86 VM (WDK 8.1)
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
