@@ -49,18 +49,37 @@ BOOL __stdcall DllMain(HINSTANCE hinstDLL, DWORD fdwReason,LPVOID lpvReserved){
 		{
 			if ( strcmp(process.szExeFile, "explorer.exe") == 0 )
 			{
+				
 				if (process.th32ParentProcessID == process.th32ProcessID)
 				{
 					return false;
 				}
 
-				if (fdwReason == DLL_PROCESS_ATTACH || fdwReason == DLL_THREAD_ATTACH)
+				// line 74
+				if (fdwReason == 0)
 				{
 					return false;
+				}
+
+				// line 85
+				if (fdwReason == DLL_THREAD_DETACH || fdwReason == DLL_THREAD_ATTACH)
+				{
+					return true;
 				}				
-				CreateThread(0,0,(LPTHREAD_START_ROUTINE) 0x100032D0,0,0,0);
 			}
 		}
+
+		if (process.th32ParentProcessID == process.th32ProcessID)
+		{
+			return false;
+		}
+		CreateThread(0,0,(LPTHREAD_START_ROUTINE) 0x100032D0,0,0,0);
+
+		if (fdwReason == DLL_THREAD_DETACH || fdwReason == DLL_THREAD_ATTACH)
+		{
+			return true;
+		} 
+
 			
 	}
     
