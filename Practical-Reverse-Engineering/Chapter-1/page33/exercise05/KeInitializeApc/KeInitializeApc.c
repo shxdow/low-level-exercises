@@ -22,6 +22,9 @@ NTKERNELAPI VOID KeInitializeApc (
 
 )
 {
+	Apc.Type = 0x12
+	Apc.Size = 0x30
+
 	if (Apc.Size == 2)
 	{
 		// Thread.ApcStateIndex saved somewhere
