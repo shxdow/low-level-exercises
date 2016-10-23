@@ -1,44 +1,82 @@
-lkd> uf KeInitializeApc
+kd> uf KeInitializeApc
 nt!KeInitializeApc:
-82909850 8bff            mov     edi,edi
-82909852 55              push    ebp
-82909853 8bec            mov     ebp,esp
-82909855 8b4508          mov     eax,dword ptr [ebp+8]
-82909858 8b5510          mov     edx,dword ptr [ebp+10h]
-8290985b 8b4d0c          mov     ecx,dword ptr [ebp+0Ch]
-8290985e c60012          mov     byte ptr [eax],12h
-82909861 c6400230        mov     byte ptr [eax+2],30h
-82909865 83fa02          cmp     edx,2
-82909868 7506            jne     nt!KeInitializeApc+0x20 (82909870)
+804faa6e 8bff            mov     edi,edi
+804faa70 55              push    ebp
+804faa71 8bec            mov     ebp,esp
+804faa73 8b4508          mov     eax,dword ptr [ebp+8]
+804faa76 8b5510          mov     edx,dword ptr [ebp+10h]
+804faa79 83fa02          cmp     edx,2
+804faa7c 8b4d0c          mov     ecx,dword ptr [ebp+0Ch]
+804faa7f 66c7001200      mov     word ptr [eax],12h
+804faa84 66c740023000    mov     word ptr [eax+2],30h
+804faa8a 7506            jne     nt!KeInitializeApc+0x24 (804faa92)
 
-nt!KeInitializeApc+0x1a:
-8290986a 8a9134010000    mov     dl,byte ptr [ecx+134h]
+nt!KeInitializeApc+0x1e:
+804faa8c 8a9165010000    mov     dl,byte ptr [ecx+165h]
 
-nt!KeInitializeApc+0x20:
-82909870 894808          mov     dword ptr [eax+8],ecx
-82909873 8b4d14          mov     ecx,dword ptr [ebp+14h]
-82909876 894814          mov     dword ptr [eax+14h],ecx
-82909879 8b4d18          mov     ecx,dword ptr [ebp+18h]
-8290987c 88502c          mov     byte ptr [eax+2Ch],dl
-8290987f 894818          mov     dword ptr [eax+18h],ecx
-82909882 8b4d1c          mov     ecx,dword ptr [ebp+1Ch]
-82909885 33d2            xor     edx,edx
-82909887 89481c          mov     dword ptr [eax+1Ch],ecx
-8290988a 3bca            cmp     ecx,edx
-8290988c 740e            je      nt!KeInitializeApc+0x4c (8290989c)
+nt!KeInitializeApc+0x24:
+804faa92 894808          mov     dword ptr [eax+8],ecx
+804faa95 8b4d14          mov     ecx,dword ptr [ebp+14h]
+804faa98 894814          mov     dword ptr [eax+14h],ecx
+804faa9b 8b4d18          mov     ecx,dword ptr [ebp+18h]
+804faa9e 88502c          mov     byte ptr [eax+2Ch],dl
+804faaa1 894818          mov     dword ptr [eax+18h],ecx
+804faaa4 8b4d1c          mov     ecx,dword ptr [ebp+1Ch]
+804faaa7 33d2            xor     edx,edx
+804faaa9 3bca            cmp     ecx,edx
+804faaab 89481c          mov     dword ptr [eax+1Ch],ecx
+804faaae 740e            je      nt!KeInitializeApc+0x50 (804faabe)
 
-nt!KeInitializeApc+0x3e:
-8290988e 8a4d20          mov     cl,byte ptr [ebp+20h]
-82909891 88482d          mov     byte ptr [eax+2Dh],cl
-82909894 8b4d24          mov     ecx,dword ptr [ebp+24h]
-82909897 894820          mov     dword ptr [eax+20h],ecx
-8290989a eb06            jmp     nt!KeInitializeApc+0x52 (829098a2)
+nt!KeInitializeApc+0x42:
+804faab0 8a4d20          mov     cl,byte ptr [ebp+20h]
+804faab3 88482d          mov     byte ptr [eax+2Dh],cl
+804faab6 8b4d24          mov     ecx,dword ptr [ebp+24h]
+804faab9 894820          mov     dword ptr [eax+20h],ecx
+804faabc eb06            jmp     nt!KeInitializeApc+0x56 (804faac4)
 
-nt!KeInitializeApc+0x4c:
-8290989c 88502d          mov     byte ptr [eax+2Dh],dl
-8290989f 895020          mov     dword ptr [eax+20h],edx
+nt!KeInitializeApc+0x50:
+804faabe 88502d          mov     byte ptr [eax+2Dh],dl
+804faac1 895020          mov     dword ptr [eax+20h],edx
 
-nt!KeInitializeApc+0x52:
-829098a2 88502e          mov     byte ptr [eax+2Eh],dl
-829098a5 5d              pop     ebp
-829098a6 c22000          ret     20h
+nt!KeInitializeApc+0x56:
+804faac4 88502e          mov     byte ptr [eax+2Eh],dl
+804faac7 5d              pop     ebp
+804faac8 c22000          ret     20h
+
+NTKERNELAPI VOID KeInitializeApc (
+
+	IN PRKAPC Apc,
+	
+	IN PKTHREAD Thread,
+	
+	IN KAPC_ENVIRONMENT Environment,
+	
+	IN PKKERNEL_ROUTINE KernelRoutine,
+	
+	IN PKRUNDOWN_ROUTINE RundownRoutine OPTIONAL,
+	
+	IN PKNORMAL_ROUTINE NormalRoutine OPTIONAL,
+	
+	IN KPROCESSOR_MODE ApcMode,
+	
+	IN PVOID NormalContext
+
+);
+
+kd> dt _KAPC
+dtx is unsupported for this scenario.  It only recognizes dtx [<type>] [<address>] with -a, -h, and -r.  Reverting to dt.
+nt!_KAPC
+   +0x000 Type             : Int2B
+   +0x002 Size             : Int2B
+   +0x004 Spare0           : Uint4B
+	    +0x008 Thread           : Ptr32 _KTHREAD
+	       +0x00c ApcListEntry     : _LIST_ENTRY
+	          +0x014 KernelRoutine    : Ptr32     void
+		     +0x018 RundownRoutine   : Ptr32     void
+		        +0x01c NormalRoutine    : Ptr32     void
+			   +0x020 NormalContext    : Ptr32 Void
+			      +0x024 SystemArgument1  : Ptr32 Void
+			         +0x028 SystemArgument2  : Ptr32 Void
+				    +0x02c ApcStateIndex    : Char
+				       +0x02d ApcMode          : Char
+				          +0x02e Inserted         : UChar
