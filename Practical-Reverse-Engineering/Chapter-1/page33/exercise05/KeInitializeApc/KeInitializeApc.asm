@@ -63,6 +63,8 @@ NTKERNELAPI VOID KeInitializeApc (
 
 );
 
+typedef KKERNEL_ROUTINE (NTAPI *  PKKERNEL_ROUTINE)
+
 kd> dt _KAPC
 dtx is unsupported for this scenario.  It only recognizes dtx [<type>] [<address>] with -a, -h, and -r.  Reverting to dt.
 nt!_KAPC
