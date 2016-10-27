@@ -18,5 +18,5 @@
      - [ ] KeInitializeQueue
      - [ ] KxWaitForLockChainValid
      - [ ] KeReadyThread
-     - [ ] KiInitializeTSS
+     - [x] KiInitializeTSS
      - [ ] RtlValidateUnicodeString
