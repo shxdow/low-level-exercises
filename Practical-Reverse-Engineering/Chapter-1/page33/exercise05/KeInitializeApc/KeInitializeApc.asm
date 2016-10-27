@@ -71,14 +71,14 @@ nt!_KAPC
    +0x000 Type             : Int2B
    +0x002 Size             : Int2B
    +0x004 Spare0           : Uint4B
-	    +0x008 Thread           : Ptr32 _KTHREAD
-	       +0x00c ApcListEntry     : _LIST_ENTRY
-	          +0x014 KernelRoutine    : Ptr32     void
-		     +0x018 RundownRoutine   : Ptr32     void
-		        +0x01c NormalRoutine    : Ptr32     void
-			   +0x020 NormalContext    : Ptr32 Void
-			      +0x024 SystemArgument1  : Ptr32 Void
-			         +0x028 SystemArgument2  : Ptr32 Void
-				    +0x02c ApcStateIndex    : Char
-				       +0x02d ApcMode          : Char
-				          +0x02e Inserted         : UChar
+   +0x008 Thread           : Ptr32 _KTHREAD
+   +0x00c ApcListEntry     : _LIST_ENTRY
+   +0x014 KernelRoutine    : Ptr32     void
+   +0x018 RundownRoutine   : Ptr32     void
+   +0x01c NormalRoutine    : Ptr32     void
+   +0x020 NormalContext    : Ptr32 Void
+   +0x024 SystemArgument1  : Ptr32 Void
+   +0x028 SystemArgument2  : Ptr32 Void
+   +0x02c ApcStateIndex    : Char
+   +0x02d ApcMode          : Char
+   +0x02e Inserted         : UChar

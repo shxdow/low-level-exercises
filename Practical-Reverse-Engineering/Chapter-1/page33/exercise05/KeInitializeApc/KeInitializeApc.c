@@ -1,9 +1,8 @@
-
 NTKERNELAPI VOID KeInitializeApc (
 	
-	IN PRKAPC Apc,			// eax = ebp+8
+	IN PRKAPC Apc,
 	
-	IN PKTHREAD Thread,		// 
+	IN PKTHREAD Thread,
 	
 	IN KAPC_ENVIRONMENT Environment,
 	
@@ -17,43 +16,46 @@ NTKERNELAPI VOID KeInitializeApc (
 	
 	IN PVOID NormalContext
 
-)
-{
-	BYTE var;
-	Apc.Type = 0x12
-	Apc.Size = 0x30
+){
+	BYTE byte_var;
+	Apc.Type = 0x12;
+	Apc.Size = 0x30;
 
 	// line 12
 	if (Apc.Size == 2)
 	{
 		// line 15
-		var = Thread.UserIdealProcessor;
+		byte_var = Thread.UserIdealProcessor;
 	}
 	
 	// line 18
-	Environment = Apc;
+	Apc.Thread = Thread;
 
 	// line 19 - 20
-	NormalRoutine = KernelRoutine;
+	Apc.KernelRoutine = KernelRoutine;
 
-	// line 21 - 22
-	ApcMode = RundownRoutine;
+	// line 22
+	Apc.StateIndex = byte_var;
+	
+	// line 21 - 23
+	Apc.RundownRoutine = RundownRoutine;
 
 	// line 23 - 24
-	NormalContext = NormalRoutine;
+	Apc.NormalRoutine = NormalRoutine;
 
 	// line 28
-	if (NormalRoutine == 0) // 0 is for kernel APC's and 1 for user ones.
+	if (Apc.NormalRoutine == 0) // 0 is for kernel APC's and 1 for user ones.
 	{
 		// line 38 - 39
-		// = NormalRoutine;		
+		Apc.ApcMode = byte_var;
+		Apc.NormalContext = 0;
+
 	} else {
 		// line 31 - 34
-		// d = var;
+		Apc.Mode = ApcMode;
+		Apc.NormalContext = NormalContext;
 	}
+
+	// line 42
+	Apc.Inserted = 0;
 }
-
-
-
-	
-
