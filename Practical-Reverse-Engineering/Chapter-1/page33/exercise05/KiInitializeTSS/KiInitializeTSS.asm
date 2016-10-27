@@ -1,16 +1,12 @@
-lkd> uf KiInitializeTSS
+kd> uf KiInitializeTSS
 nt!KiInitializeTSS:
-82851a6c 8bff            mov     edi,edi
-82851a6e 55              push    ebp
-82851a6f 8bec            mov     ebp,esp
-82851a71 8b4508          mov     eax,dword ptr [ebp+8]
-82851a74 b9ac200000      mov     ecx,20ACh
-82851a79 66894866        mov     word ptr [eax+66h],cx
-82851a7d 33c9            xor     ecx,ecx
-82851a7f 6a10            push    10h
-82851a81 66894864        mov     word ptr [eax+64h],cx
-82851a85 66894860        mov     word ptr [eax+60h],cx
-82851a89 59              pop     ecx
-82851a8a 66894808        mov     word ptr [eax+8],cx
-82851a8e 5d              pop     ebp
-82851a8f c20400          ret     4
+81a16eea 8bff            mov     edi,edi
+81a16eec 55              push    ebp
+81a16eed 8bec            mov     ebp,esp
+81a16eef 8b4508          mov     eax,dword ptr [ebp+8]
+81a16ef2 6683606400      and     word ptr [eax+64h],0
+81a16ef7 6683606000      and     word ptr [eax+60h],0
+81a16efc 66c74066ac20    mov     word ptr [eax+66h],20ACh
+81a16f02 66c740081000    mov     word ptr [eax+8],10h
+81a16f08 5d              pop     ebp
+81a16f09 c20400          ret     4
