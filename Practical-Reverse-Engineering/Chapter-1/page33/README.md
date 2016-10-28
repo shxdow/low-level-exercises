@@ -15,7 +15,7 @@
      - [x] KeInitializeDpc
      - [x] KeInitializeApc
      - [ ] ObFastDereferenceObject (and explain its calling convention)
-     - [ ] KeInitializeQueue
+     - [x] KeInitializeQueue
      - [ ] KxWaitForLockChainValid
      - [ ] KeReadyThread
      - [x] KiInitializeTSS
