@@ -35,6 +35,7 @@ VOID KeInitializeQueue(
 		// line 28
 		Queue.MaximumCount = Count;
 	}
+	return ;
 }
 
 /*
