@@ -1,4 +1,72 @@
-lkd> uf RtlValidateUnicodeString
+kd>uf RtlValidateUnicodeString
+Flow analysis was incomplete, some code may be missing
+ntdll!RtlValidateUnicodeString:
+7c9156d2 8bff            mov     edi,edi
+7c9156d4 55              push    ebp
+7c9156d5 8bec            mov     ebp,esp
+7c9156d7 837d0800        cmp     dword ptr [ebp+8],0
+7c9156db 0f850a6a0300    jne     ntdll!RtlValidateUnicodeString+0xb (7c94c0eb)
+
+ntdll!RtlValidateUnicodeString+0x12:
+7c9156e1 8b4d0c          mov     ecx,dword ptr [ebp+0Ch]
+7c9156e4 85c9            test    ecx,ecx
+7c9156e6 56              push    esi
+7c9156e7 57              push    edi
+7c9156e8 7433            je      ntdll!RtlValidateUnicodeString+0x5a (7c91571d)
+
+ntdll!RtlValidateUnicodeString+0x1b:
+7c9156ea 668b39          mov     di,word ptr [ecx]
+7c9156ed 0fb7c7          movzx   eax,di
+7c9156f0 6a02            push    2
+7c9156f2 99              cdq
+7c9156f3 5e              pop     esi
+7c9156f4 f7fe            idiv    eax,esi
+7c9156f6 85d2            test    edx,edx
+7c9156f8 7532            jne     ntdll!RtlValidateUnicodeString+0x53 (7c91572c)
+
+ntdll!RtlValidateUnicodeString+0x2b:
+7c9156fa 668b7102        mov     si,word ptr [ecx+2]
+7c9156fe 53              push    ebx
+7c9156ff 0fb7c6          movzx   eax,si
+7c915702 6a02            push    2
+7c915704 99              cdq
+7c915705 5b              pop     ebx
+7c915706 f7fb            idiv    eax,ebx
+7c915708 5b              pop     ebx
+7c915709 85d2            test    edx,edx
+7c91570b 751f            jne     ntdll!RtlValidateUnicodeString+0x53 (7c91572c)
+
+ntdll!RtlValidateUnicodeString+0x3e:
+7c91570d 663bfe          cmp     di,si
+7c915710 771a            ja      ntdll!RtlValidateUnicodeString+0x53 (7c91572c)
+
+ntdll!RtlValidateUnicodeString+0x43:
+7c915712 6685ff          test    di,di
+7c915715 740e            je      ntdll!RtlValidateUnicodeString+0x48 (7c915725)
+
+ntdll!RtlValidateUnicodeString+0x4d:
+7c915717 83790400        cmp     dword ptr [ecx+4],0
+7c91571b 740f            je      ntdll!RtlValidateUnicodeString+0x53 (7c91572c)
+
+ntdll!RtlValidateUnicodeString+0x5a:
+7c91571d 33c0            xor     eax,eax
+
+ntdll!RtlValidateUnicodeString+0x5c:
+7c91571f 5f              pop     edi
+7c915720 5e              pop     esi
+7c915721 5d              pop     ebp
+7c915722 c20800          ret     8
+
+ntdll!RtlValidateUnicodeString+0x48:
+7c915725 6685f6          test    si,si
+7c915728 75ed            jne     ntdll!RtlValidateUnicodeString+0x4d (7c915717)
+
+ntdll!RtlValidateUnicodeString+0x4d:
+7c91572a ebf1            jmp     ntdll!RtlValidateUnicodeString+0x5a (7c91571d)
+
+ntdll!RtlValidateUnicodeString+0x53:
+7c91572c b80d0000c0      mov     eax,0C000000Dh
+7c915731 ebec            jmp     ntdll!RtlValidateUnicodeString+0x5c (7c91571f)
 nt!RtlValidateUnicodeString:
 8286a342 8bff            mov     edi,edi
 8286a344 55              push    ebp

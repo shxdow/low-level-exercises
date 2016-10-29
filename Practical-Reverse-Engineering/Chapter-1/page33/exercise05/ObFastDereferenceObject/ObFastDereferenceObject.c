@@ -1,0 +1,5 @@
+VOID NTAPI ObFastDereferenceObject()
+{
+	
+	return ;
+}
