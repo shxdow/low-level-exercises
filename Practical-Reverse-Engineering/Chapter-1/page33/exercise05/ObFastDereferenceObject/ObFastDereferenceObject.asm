@@ -1,39 +1,45 @@
-lkd> uf ObFastDereferenceObject
+
+kd>uf ObFastDereferenceObject
 nt!ObFastDereferenceObject:
-8288c48b 8bff            mov     edi,edi
-8288c48d 55              push    ebp
-8288c48e 8bec            mov     ebp,esp
-8288c490 51              push    ecx
-8288c491 8b0a            mov     ecx,dword ptr [edx]
-8288c493 56              push    esi
-8288c494 57              push    edi
-8288c495 8bc1            mov     eax,ecx
-8288c497 eb13            jmp     nt!ObFastDereferenceObject+0x21 (8288c4ac)
+805bbf90 8bff            mov     edi,edi
+805bbf92 55              push    ebp
+805bbf93 8bec            mov     ebp,esp
+805bbf95 83ec0c          sub     esp,0Ch
+805bbf98 53              push    ebx
+805bbf99 56              push    esi
+805bbf9a 57              push    edi
+805bbf9b 8bf9            mov     edi,ecx
+805bbf9d 8bda            mov     ebx,edx
+805bbf9f 897df8          mov     dword ptr [ebp-8],edi
 
-nt!ObFastDereferenceObject+0xe:
-8288c499 8d4101          lea     eax,[ecx+1]
-8288c49c 8bf0            mov     esi,eax
-8288c49e 8bfa            mov     edi,edx
-8288c4a0 8bc1            mov     eax,ecx
-8288c4a2 f00fb137        lock cmpxchg dword ptr [edi],esi
-8288c4a6 3bc1            cmp     eax,ecx
-8288c4a8 7412            je      nt!ObFastDereferenceObject+0x31 (8288c4bc)
+nt!ObFastDereferenceObject+0x12:
+805bbfa2 8b37            mov     esi,dword ptr [edi]
+805bbfa4 8bc6            mov     eax,esi
+805bbfa6 33c3            xor     eax,ebx
+805bbfa8 83f807          cmp     eax,7
+805bbfab 8975f4          mov     dword ptr [ebp-0Ch],esi
+805bbfae 7318            jae     nt!ObFastDereferenceObject+0x38 (805bbfc8)
 
-nt!ObFastDereferenceObject+0x1f:
-8288c4aa 8bc8            mov     ecx,eax
+nt!ObFastDereferenceObject+0x20:
+805bbfb0 8d4601          lea     eax,[esi+1]
+805bbfb3 8945fc          mov     dword ptr [ebp-4],eax
+805bbfb6 8b45f4          mov     eax,dword ptr [ebp-0Ch]
+805bbfb9 8b4df8          mov     ecx,dword ptr [ebp-8]
+805bbfbc 8b55fc          mov     edx,dword ptr [ebp-4]
+805bbfbf 0fb111          cmpxchg dword ptr [ecx],edx
+805bbfc2 3bc6            cmp     eax,esi
+805bbfc4 75dc            jne     nt!ObFastDereferenceObject+0x12 (805bbfa2)
 
-nt!ObFastDereferenceObject+0x21:
-8288c4ac 334508          xor     eax,dword ptr [ebp+8]
-8288c4af 83f807          cmp     eax,7
-8288c4b2 72e5            jb      nt!ObFastDereferenceObject+0xe (8288c499)
+nt!ObFastDereferenceObject+0x36:
+805bbfc6 eb07            jmp     nt!ObFastDereferenceObject+0x3f (805bbfcf)
 
-nt!ObFastDereferenceObject+0x29:
-8288c4b4 8b4d08          mov     ecx,dword ptr [ebp+8]
-8288c4b7 e807ba0200      call    nt!ObfDereferenceObject (828b7ec3)
+nt!ObFastDereferenceObject+0x38:
+805bbfc8 8bcb            mov     ecx,ebx
+805bbfca e8876cf6ff      call    nt!ObfDereferenceObject (80522c56)
 
-nt!ObFastDereferenceObject+0x31:
-8288c4bc 5f              pop     edi
-8288c4bd 5e              pop     esi
-8288c4be 59              pop     ecx
-8288c4bf 5d              pop     ebp
-8288c4c0 c20400          ret     4
+nt!ObFastDereferenceObject+0x3f:
+805bbfcf 5f              pop     edi
+805bbfd0 5e              pop     esi
+805bbfd1 5b              pop     ebx
+805bbfd2 c9              leave
+805bbfd3 c3              ret
