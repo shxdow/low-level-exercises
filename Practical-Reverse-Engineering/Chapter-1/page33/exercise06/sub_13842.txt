@@ -1,0 +1,39 @@
+.rdata:000168DC base_addres     dd 7940h                ; DATA XREF: sub_11798+56r
+.rdata:000168DC                                         ; sub_1194C+34r ...
+.rdata:000168E0 dword_168E0     dd 794Ah                ; DATA XREF: sub_1194C+208r
+.rdata:000168E4 dword_168E4     dd 795Ah                ; DATA XREF: sub_11CCC+22r
+.rdata:000168E8 dword_168E8     dd 796Ah                ; DATA XREF: sub_11D74+2Br
+.rdata:000168EC dword_168EC     dd 797Ah                ; DATA XREF: sub_11F42+AFr
+.rdata:000168EC                                         ; .text:000163BCr
+.rdata:000168F0 dword_168F0     dd 7992h                ; DATA XREF: sub_11F42+89r
+.rdata:000168F0                                         ; sub_16088+41r
+.rdata:000168F4 dword_168F4     dd 7668h                ; DATA XREF: sub_11F42+20r
+.rdata:000168F4                                         ; sub_12BDC+20r
+.rdata:000168F8 dword_168F8     dd 79C6h                ; DATA XREF: sub_10AEA+3Cr
+.rdata:000168FC dword_168FC     dd 79DEh                ; DATA XREF: .text:00012120r
+.rdata:00016900 dword_16900     dd 79F4h                ; DATA XREF: sub_16716r
+.rdata:00016904 dword_16904     dd 7A12h                ; DATA XREF: sub_122E0+Dr
+.rdata:00016908 dword_16908     dd 7A30h                ; DATA XREF: sub_1230A+25r
+.rdata:0001690C dword_1690C     dd 7A40h                ; DATA XREF: sub_1671Cr
+.rdata:00016910 dword_16910     dd 7A58h                ; DATA XREF: sub_126E4+82r
+.rdata:00016914 dword_16914     dd 7A64h                ; DATA XREF: sub_126E4+4Er
+.rdata:00016918 dword_16918     dd 7A72h                ; DATA XREF: sub_12788+5r
+.rdata:0001691C dword_1691C     dd 7A7Ch                ; DATA XREF: .text:000128FDr
+.rdata:0001691C                                         ; sub_12938+E8r
+.rdata:00016920 dword_16920     dd 7A90h                ; DATA XREF: .text:00012814r
+.rdata:00016924 dword_16924     dd 7AB2h                ; DATA XREF: sub_16722r
+.rdata:00016928 dword_16928     dd 7ACAh                ; DATA XREF: sub_12E6A+49r
+.rdata:00016928                                         ; sub_14AF2+39r ...
+.rdata:0001692C dword_1692C     dd 7AECh                ; DATA XREF: sub_12E6A+2Fr
+.rdata:0001692C                                         ; sub_161D7+165r
+.rdata:00016930 dword_16930     dd 7B00h                ; DATA XREF: sub_1300A+5Cr
+.rdata:00016934 dword_16934     dd 7B1Ah                ; DATA XREF: sub_1300A+53r
+.rdata:00016938 dword_16938     dd 7B2Ch                ; DATA XREF: sub_1300A+49r
+.rdata:0001693C base_p60        dd 7B42h                ; DATA XREF: sub_13086+4r
+.rdata:0001693C                                         ; sub_13086+38r ...
+.rdata:00016940 dword_16940     dd 7B5Eh                ; DATA XREF: sub_133A0+22r
+.rdata:00016940                                         ; sub_133A0+64r ...
+.rdata:00016944 dword_16944     dd 7B74h                ; DATA XREF: sub_16728r
+.rdata:00016948 dword_16948     dd 7B8Eh                ; DATA XREF: .text:loc_13642r
+.rdata:0001694C dword_1694C     dd 7BA4h                ; DATA XREF: sub_13232+19r
+.rdata:00016950 base_p74        dd 7BB8h                ; DATA XREF: j_base_p74
