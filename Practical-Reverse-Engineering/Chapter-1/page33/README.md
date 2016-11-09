@@ -27,7 +27,7 @@
      - [x] KiInitializeTSS
      - [-] RtlValidateUnicodeString
 
-6. - [ ] Sample H. The function sub_13846 references several structures whose
+6. - [x] Sample H. The function sub_13846 references several structures whose
    types are not entirely clear. Your task is to first recover the function
    prototype and then try to reconstruct the structure fields.
    After reading Chapter 3, return to this exercise to see if your 
