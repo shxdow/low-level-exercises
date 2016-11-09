@@ -38,7 +38,7 @@
    context. Hint: You should probably have a copy of the PE specification
    nearby.
 
-8. Sample H. Decompile sub_11732 and explain the most likely programming
+8. - [ ] Sample H. Decompile sub_11732 and explain the most likely programming
    construct used in the original code.
 
 9. - [x] Sample L. Explain what function sub_1000CEA0 does and then decompile it
