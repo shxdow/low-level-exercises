@@ -33,21 +33,21 @@
    After reading Chapter 3, return to this exercise to see if your 
    understanding has changed. (Note: This sample is targeting Windows XP x86.)
 
-7. - [ ] Sample H. The function sub_10BB6 has a loop searching for something.
+7. - [x] Sample H. The function sub_10BB6 has a loop searching for something.
    First recover the function prototype and then infer the types based on the
    context. Hint: You should probably have a copy of the PE specification
    nearby.
 
-8. - [ ] Sample H. Decompile sub_11732 and explain the most likely programming
+8. - [x] Sample H. Decompile sub_11732 and explain the most likely programming
    construct used in the original code.
 
 9. - [x] Sample L. Explain what function sub_1000CEA0 does and then decompile it
    back to C.
 
-10. If the current privilege level is encoded in CS, which is modifiable by
+10. - [ ] If the current privilege level is encoded in CS, which is modifiable by
 	user-mode code, why can't user-mode code modify CS to change CPL?
 
-11. Read the Virtual Memory chapter in Intel Software Developer Manual,
+11. - [x] Read the Virtual Memory chapter in Intel Software Developer Manual,
 	Volume 3 and AMD64 Architecture Programmer's Manual, Volume 2: System
 	Programming. Perform a few virtual address to physical address
 	translations yourself and verify the result with a kernel debugger.
