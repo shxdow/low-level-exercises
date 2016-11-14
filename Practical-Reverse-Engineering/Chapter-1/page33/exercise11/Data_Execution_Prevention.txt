@@ -1,0 +1,4 @@
+DEP
+
+DEP is a mechanism that consists in marking memory pages as non executable, in
+order to stop buffer overflows to be exploited by injected code.
