@@ -28,3 +28,21 @@ nt!_KDPC
    +0x014 SystemArgument1  : Ptr32 Void
    +0x018 SystemArgument2  : Ptr32 Void
    +0x01c DpcData          : Ptr32 Void	
+<<<<<<< HEAD
+
+C code
+
+VOID KeInitializeDpc(
+  _Out_    PRKDPC             Dpc,
+  _In_     PKDEFERRED_ROUTINE DeferredRoutine,
+  _In_opt_ PVOID              DeferredContext) {
+  
+	Dpc.Data = 0;
+	Dpc.Type = 0x13;
+	Dpc.Importance = 1;
+	Dpc.Number = 0;
+	Dpc->DeferredRoutine = DeferredRoutine;
+	Dpc->DeferredContext = DeferredContext;
+}
+=======
+>>>>>>> 434041892599038e2c9d6b1f7a6cacf04478e515
