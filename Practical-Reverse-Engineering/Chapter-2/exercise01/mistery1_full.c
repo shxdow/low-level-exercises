@@ -6,11 +6,11 @@
  *
  */
 
-unknown_type sub_1234(int32_t arg0, arg1, arg2, int32_t arg3)
+unknown_type sub_1234(int32_t arg0, arg1)
 {
 		// line 4
 		if (arg4 == 0x2D) {
-    			arg0.field0_c = R3;
+    			arg0.field1 = ;
 	    		R6 = 1;
 		} else {
 		    	// line 6
