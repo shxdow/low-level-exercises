@@ -23,9 +23,31 @@
 
 6.
 
-type func ()
+type func (struct arg0, arg1)
 	if (arg0 == 0x2D)
 
 	else if (arg0 <= 0x2B)
 		arg0 = arg0.field0x1
-	
+
+        // line 10
+        if (arg0 == 0x30)
+                // increase the number until it equates to 0x30
+                arg0 = arg0 + arg0 + 1;
+                do {
+                       arg0++;
+                } while (arg0 );
+        
+        // set some registers to 0
+        // does some other stuff
+
+        // this actually makes no sense
+        if (arg0 < 0x30) {
+                //    R6
+                if ( (0|1) >= 0x80000000) {
+                        return 0;
+                }
+                if ( R6 == 0) {
+                        return 1;
+                }
+        }
+                
