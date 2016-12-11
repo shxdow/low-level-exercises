@@ -1,10 +1,6 @@
-
-/*
- * This doesn't look like a function as it doesn't save the register state
- */
-mistery3 ()
+bool mistery3 (struct * arg0,struct arg1)
 {
-    [R3 + 0x8] = [R0 + 0x8];
-    R0 = 0;
-    [R3 + 0xC] = [R4 + 0x4];
+    arg1.field0x0_i = arg0.field0x8_i;
+    arg1.field0xC_i = arg0.field0x4_i;
+    return 0;
 }
