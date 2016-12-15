@@ -23,31 +23,43 @@
 
 6.
 
-type func (struct arg0, arg1)
-	if (arg0 == 0x2D)
+bool atoi (char * arg0, int arg1) {
+    int index = 0; 
+    int result = 0;
+    bool positive;
 
-	else if (arg0 <= 0x2B)
-		arg0 = arg0.field0x1
+    if (arg0[0] == '+') do
+        positive = true
+        ++index;
+    fi
 
-        // line 10
-        if (arg0 == 0x30)
-                // increase the number until it equates to 0x30
-                arg0 = arg0 + arg0 + 1;
-                do {
-                       arg0++;
-                } while (arg0 );
-        
-        // set some registers to 0
-        // does some other stuff
+    else if (arg0[0] == '-') do
+        positive = false
+        ++index;
+    fi
+    
+    // skip leading zeros
+    while (arg0[index] == '0') do
+        ++index;
 
-        // this actually makes no sense
-        if (arg0 < 0x30) {
-                //    R6
-                if ( (0|1) >= 0x80000000) {
-                        return 0;
-                }
-                if ( R6 == 0) {
-                        return 1;
-                }
-        }
-                
+    // convert the string
+    while ( (arg0[index] >= 0) && (arg0[index] <= 9) )
+        result = result*10 + (arg0[index] - '0')
+
+    if (absolute(result) >= 2^31)
+        return false;
+    fi
+
+    if (!positive) do
+        arg1 = -result;
+        return true;
+    fi
+    
+    arg1 = result;
+    return true;
+    
+
+
+
+
+}
