@@ -1,14 +1,10 @@
 // thumb mode code
 
-type mistery7 (arg0)
+uint32_t mistery7 (char * arg0)
 {
-    if (arg0 != 0)
-    {
-        while (arg0 < 0)
-            arg0++;
-
-        arg0 0x1E |~ 2;
-
+    uint32_t i = 0;
+    while (arg0[i] != '\0')
+        ++i;
     }
-    return 0;
+    return i;
 }
