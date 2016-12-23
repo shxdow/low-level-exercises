@@ -1,0 +1,23 @@
+
+0.	How does an interrupt work ?
+    ___________________________________________________________________________
+
+	The operating system uses data structures (IDT) to know which interrupts 
+	are handled and how.
+
+
+1.	What are SYSENTER / SYSEXIT and why do we need them
+    ___________________________________________________________________________
+
+	These two instructions are used to implement syscalls. (The reason we have
+	syscalls in the first place is beacuse user space *can't* directly access
+	hardware / physical mem addresses.)
+
+2.	In which way can a system call be implemented ?
+    ___________________________________________________________________________
+
+	Syscalls can be implemented by usign either having a dedicated int code
+	(0x2e) a trap instructions (SYSENTER/SYSEXIT).
+
+3.	
+    ___________________________________________________________________________
