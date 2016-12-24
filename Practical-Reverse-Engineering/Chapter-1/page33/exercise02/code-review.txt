@@ -1,0 +1,2 @@
+0.	The snapshot Handle never gets closed.
+1.	There's no error checking on CreateThread().
