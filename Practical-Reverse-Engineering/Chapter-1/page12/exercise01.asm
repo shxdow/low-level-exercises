@@ -1,5 +1,6 @@
-1. This function uses a combination SCAS and STOS to do its work. First, explain what is the type of the [EBP+8] and [EBP+C] in
-   line 1 and 8, respectively. Next, explain what this snippet does.
+1.	This function uses a combination SCAS and STOS to do its work. First,
+	explain what is the type of the [EBP+8] and [EBP+C] in line 1 and 8,
+	respectively. Next, explain what this snippet does.
 
 01: 8B 7D 08         mov   edi, [ebp+8]     ;   edi = first argument
 02: 8B D7            mov   edx, edi         ;   stores the string pointer,as the function will modify it
@@ -8,7 +9,10 @@
 05: F2 AE            repne scasb            ;   repeats if ZF = 0, max ecx times. Compares a byte from eax with the one pointed by edi
 06: 83 C1 02         add   ecx, 2           ;   ecx was initialized to -1,and strlen( ) does not count the NULL byte (we have to subtract 1 once more)
 07: F7 D9            neg   ecx              ;   ecx is a negative number
-08: 8A 45 0C         mov   al, [ebp+0Ch]    ;   al = second argument
+08: 8A 45 0C         mov   al, [ebp+0Ch]    ;   al = second arg type: char*
 09: 8B FA            mov   edi, edx         ;   edi = first argument
 10: F3 AA            rep stosb              ;   memset(edi, al)
 11: 8B C2            mov   eax, edx         ;   returns a pointer to the string
+
+	What the functions does is zero'ing a string. It first retrieves it's
+	length and the zero's it.
