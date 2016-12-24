@@ -8,7 +8,6 @@
 	(x86/x64 respectively)
 
 
-
 1.	How does an interrupt work ?
     ___________________________________________________________________________
 
@@ -37,6 +36,7 @@
 	Syscalls can be implemented by usign either having a dedicated int code
 	(0x2e) a trap instructions (SYSENTER/SYSEXIT).
 
+
 5.	Explain IRQL
     ___________________________________________________________________________
 
@@ -47,3 +47,19 @@
 
 	doubt 1: How does the CPU know when to increase/decrease IRQL ? Does it
 			 have a queue or something ?
+
+
+5.	What are MDLs,why do we need them and what is their relationship w/ the
+	MMU ?
+    ___________________________________________________________________________
+
+
+
+7.	Explain execution contests
+    ___________________________________________________________________________
+
+	Unlike Linux, Windows distinguishes threads from processess (every process
+	has at least 1 thread). A contest is a collection of all the information
+	relevant to the process.
+
+	doubt 1: Are they 'relevant' for the reverse engineers?
