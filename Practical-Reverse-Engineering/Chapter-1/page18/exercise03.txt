@@ -1,0 +1,6 @@
+3.	In the example function, addme, what would happen if the stack pointer were
+	not properly restored before executing RET?
+
+	If the stack pointer doesn't get restored before leaving a function that
+	allocated space memory leaks occur because when ret restores the old EBP we
+	are left with a huge stack frame unused.

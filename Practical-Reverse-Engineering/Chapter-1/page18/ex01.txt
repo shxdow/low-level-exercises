@@ -1,2 +1,0 @@
-1. In addition to being futile, allowing MOV to set the
-EIP value would open up lots of security issues.

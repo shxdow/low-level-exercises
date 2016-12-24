@@ -1,0 +1,6 @@
+1.	Given what you learned about CALL and RET, explain how you would read the
+	value of EIP? Why can't you just do MOV EAX, EIP?
+
+	The x86 arch simply doesn't allow any interaction with EIP outside for
+	specific instructions such as 'call', 'ret' and jumps. This is because does
+	not have any practical use (ARM exposes the R15 to read/write instructions.
