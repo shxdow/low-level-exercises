@@ -37,5 +37,13 @@
 	Syscalls can be implemented by usign either having a dedicated int code
 	(0x2e) a trap instructions (SYSENTER/SYSEXIT).
 
-4.	
+5.	Explain IRQL
     ___________________________________________________________________________
+
+	Interrupt Request Level are numbers associated with interrupts and describe
+	the "priority" of the int. IRQL is an unsigned char and is per-processor:
+	interrupts are handled only if they number is equal or higher than the
+	current IRQL. 
+
+	doubt 1: How does the CPU know when to increase/decrease IRQL ? Does it
+			 have a queue or something ?
