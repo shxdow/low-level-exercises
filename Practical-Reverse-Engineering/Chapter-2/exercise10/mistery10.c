@@ -1,8 +1,6 @@
 // thumb mode code
 //
-//
-//
-// arg0: may hold the result
+// arg0: is never read from,and there's no way to infer it's type.
 // arg1: is the number that decides which calls are executed.
 // arg2: is the structure used in the code.
 
@@ -22,27 +20,31 @@ typedef struct _STRUCT {
 
 #include <windows.h>
 
-void mistery10 (arg0,uint32_t arg1, _STRUCT * arg2) {
-
-	if (arg1 >= 0x10) {
+uint32_t mistery10 (arg0,uint32_t arg1, _STRUCT * arg2) {
+	
+	uint32_t bytes_written = 0;
+			 
+	if (arg1 >= 0x10) {									// 32 - 16
 			GetSystemTime(arg2);
-			arg1 = 0x10;
+			bytes_written = sizeof(SYSTEM);
 	}
 	// line 24
-	if (arg1 >= 4) {
+	if ((arg1 - bytes_written) >= 4) {					// 32 - 16
 			arg2.dwProcessId = GetCurrentProcessId();
-			arg1 += 4;
+			bytes_written += sizeof(DWORD);
 	}
 
 	// line 37
-	if (arg1 >= 4) {
+	if ((arg1 - bytes_written) >= 4) {					// 32 - 20
 			arg2.dwTickCount = GetTickCount();
-			arg1 += 4;
+			bytes_written += sizeof(DWORD);
 	}
 
 	// line 46
-	if (arg1 >= 8) {
+	if ((arg1 - bytes_written) >= 8) {					// 32 - 24
 			arg2.liPerformanceCounter = QueryPerformanceCounter();
-			reg4 += 8;
+			bytes_written += sizeof(LARGE_INTEGER);
 	}
+
+	return bytes_written;
 }
