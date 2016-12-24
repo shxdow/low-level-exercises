@@ -1,23 +1,41 @@
+1.	What are PCR, PRCB and why do we have them?
+    ___________________________________________________________________________
 
-0.	How does an interrupt work ?
+	PCR (Process Control Region) is a per-processor data structure used in the
+	kernel that contains critical information about it. **Inside of it**
+	there's PRCB (Process Region Control Block) which contains other stuff
+	about it. (both undocumented). In order to access the PCR FS/GS are used
+	(x86/x64 respectively)
+
+
+
+1.	How does an interrupt work ?
     ___________________________________________________________________________
 
 	The operating system uses data structures (IDT) to know which interrupts 
 	are handled and how.
 
 
-1.	What are SYSENTER / SYSEXIT and why do we need them
+2.	What are SYSENTER / SYSEXIT and why do we need them
     ___________________________________________________________________________
 
 	These two instructions are used to implement syscalls. (The reason we have
 	syscalls in the first place is beacuse user space *can't* directly access
 	hardware / physical mem addresses.)
 
-2.	In which way can a system call be implemented ?
+
+3.	How are syscalls information data stored/retrieved
+    ___________________________________________________________________________
+
+	Windows distinguishes GUI syscalls from non-GUI ones: W32pServiceTable and
+	KiServiceTable. They have a base and a limit.
+
+	
+4.	In which way can a system call be implemented ?
     ___________________________________________________________________________
 
 	Syscalls can be implemented by usign either having a dedicated int code
 	(0x2e) a trap instructions (SYSENTER/SYSEXIT).
 
-3.	
+4.	
     ___________________________________________________________________________
