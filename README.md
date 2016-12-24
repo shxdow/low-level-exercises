@@ -1,14 +1,19 @@
-# Reverse Engineering
+# Miscellaneous Reverse Engineering Solutions
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### Quick summary ###
 
-### What is this repository for? ###
+	* This is a collection of solutions to exercises regarding reverse
+	  engineering and low level things.
 
-* This is a collection of solutions to exercises mostly regarding Assembly and low level things.
+### Setup ###
 
-### How do I get set up? ###
+	* The following things were used in a way or another:
+    1. GNU/Linux
+	2. Windows 7 x86 VM 
+	3. Windows XP SP3 VM
+	4. A disassembler
 
-* The following things were used in a way or another:
-1. GNU/Linux
-2. Windows 7 x86 VM (WDK 8.1)
+### Contribution guidelines ###
 
+	Any sort of contribution is welcome as I'm likely to have missed something 
+	along the road.
