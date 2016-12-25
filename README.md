@@ -1,4 +1,4 @@
-# Miscellaneous Reverse Engineering Solutions
+#  
 
 ### Quick summary ###
 
