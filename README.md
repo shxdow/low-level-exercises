@@ -7,7 +7,7 @@ engineering and low level things.
 
 #  
 
-### Contribution guidelines ###
+### Contributing ###
 
 Any sort of contribution is welcome as I'm likely to have missed something
 along the road.
