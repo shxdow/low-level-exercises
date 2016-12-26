@@ -1,4 +1,5 @@
 #  
+![foo bar](https://img.shields.io/badge/Status-%20Work%20in%20Progress-blue.svg?style=flat-squared)  
 
 ### Quick summary ###
 
