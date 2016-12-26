@@ -14,7 +14,7 @@
 14: 5F               pop     edi
 15: 8B E5            mov     esp, ebp                     ;  function epilogue
 16: 5D               pop     ebp                          ;  function epilogue
-17: C2 0C 00         retn    0Ch                          ;
+17: C2 0C 00         retn    0Ch                          ;	 return
 18:                loc_10001C88:                          ;
 19: 33 C0            xor     eax, eax                     ;  set EAX to 0, so we can later use it as an argument
 20: B9 49 00 00 00   mov     ecx, 49h                     ;  49h = 73d
@@ -25,13 +25,13 @@
 25: F3 AB            rep stosd                            ;  we set those 4 bytes to 0,starting from address 12Ch
 26: E8 2D 2F 00 00   call    CreateToolhelp32Snapshot     ;  Takes a snapshot of the specified processes, as well as the heaps, modules, and threads used by these processes.
 27: 8B F8            mov     edi, eax                     ;  the return value of CreateToolhelp32Snapshot is stored in EAX,which is then assigned to EDI
-28: 83 FF FF         cmp     edi, 0FFFFFFFFh              ;  if ( edi == -1 )
+28: 83 FF FF         cmp     edi, 0FFFFFFFFh              ;  if ( edi != -1 )
 29: 75 09            jnz     short loc_10001CB9 (line 35) ;  jump line 35
 30: 33 C0            xor     eax, eax                     ;	 
 31: 5F               pop     edi                          ;  restores the previous EDI value
 32: 8B E5            mov     esp, ebp                     ;  function epilogue
 33: 5D               pop     ebp                          ;  function epilogue
-34: C2 0C 00         retn    0Ch
+34: C2 0C 00         retn    0Ch						  ;  return
 35:                loc_10001CB9:
 36: 8D 85 D0 FE FF+  lea     eax, [ebp-130h]              ;
 37: 56               push    esi                          ;  ESI will be later used for the _stricmp function
@@ -73,8 +73,8 @@
 73:                loc_10001D2A:
 74: 3B C1            cmp     eax, ecx                     ;
 75: 5E               pop     esi                          ;  restores esi
-76: 75 09            jnz     short loc_10001D38 (line 82) ;  if ( fdwReason != 0 )
-77: 33 C0            xor     eax, eax                     ;	 return 0
+76: 75 09            jnz     short loc_10001D38 (line 82) ;  if ( fdwReason == 0 )
+77: 33 C0            xor     eax, eax                     ;
 78: 5F               pop     edi
 79: 8B E5            mov     esp, ebp                     ;  function epilogue
 80: 5D               pop     ebp                          ;  function epilogue
