@@ -1,0 +1,65 @@
+    Determine whether it is in Thumb or ARM state.
+    Explain each instruction's semantic. If the instruction is LDR/STR, explain the addressing mode as well.
+    Identify the types (width and signedness) for every possible object. For structures, recover field size, type, and friendly name whenever possible. Not all structure fields will be recoverable because the function may only access a few fields. For each type recovered, explain to yourself (or someone else) how you inferred it.
+    Recover the function prototype.
+    Identify the function prologue and epilogue.
+    Explain what the function does and then write pseudo-code for it.
+    Decompile the function back to C and give it a meaningful name.
+
+1. The code is in ARM mode as all the instructions are at least 32 bits long.
+2. LDR source, destination | STR destination, source
+3. @ line 58: the exclamation mark simply saves all the operations executed on 
+              the register R0. arg0.field0x1_int32 = 0x2D
+
+3. struct arg0 {
+	int8_t field0x0_c;
+	// this one is used by the function
+	int8_t field0x1_c;
+   }
+
+4. int function(struct arg0, arg1)
+
+5. Function prologue: line 02   epilogue: line 41-42
+
+6.
+
+bool atoi (char * arg0, int arg1) {
+    int index = 0; 
+    int result = 0;
+    bool positive;
+
+    if (arg0[0] == '+') do
+        positive = true
+        ++index;
+    fi
+
+    else if (arg0[0] == '-') do
+        positive = false
+        ++index;
+    fi
+    
+    // skip leading zeros
+    while (arg0[index] == '0') do
+        ++index;
+
+    // convert the string
+    while ( (arg0[index] >= 0) && (arg0[index] <= 9) )
+        result = result*10 + (arg0[index] - '0')
+
+    if (absolute(result) >= 2^31)
+        return false;
+    fi
+
+    if (!positive) do
+        arg1 = -result;
+        return true;
+    fi
+    
+    arg1 = result;
+    return true;
+    
+
+
+
+
+}
