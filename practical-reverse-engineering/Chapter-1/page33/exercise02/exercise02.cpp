@@ -9,7 +9,7 @@ struct IDTR{				// struct rappresenting IDT register
 
 BOOL __stdcall DllMain(HINSTANCE hinstDLL, DWORD fdwReason,LPVOID lpvReserved){
     
-	IDTR idt;					// holds IDTR's state
+	IDTR idt;							// holds IDTR's state
 	HANDLE snapshot_taken;				// will hold a snapshot
 	PROCESSENTRY32 process;
 
@@ -23,14 +23,14 @@ BOOL __stdcall DllMain(HINSTANCE hinstDLL, DWORD fdwReason,LPVOID lpvReserved){
 	std::cout << "Limit:\t" << std::hex << idt.limit << "\n";
 	std::cout << "Base:\t" << std::hex << idt.base << std::endl;
 	
-	if (0x8003F400 < idt.base && idt.base > 0x80047400) {
 	// invalid addresses are a result of either the system being broken
-	// or being virtualized, hence , this is a anti-vm techinque	  
+	// or being virtualized, hence , this is a anti-vm techinque	   	
+	if (0x8003F400 < idt.base && idt.base > 0x80047400) {
 			std::cout << "ret 1" << std::endl;
-        		return false;
+       		return false;
 	}
 	
-	/* A snapshot of the system is about to be taken */
+	// A snapshot of the system is about to be taken
     if ((snapshot_taken = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS,0))
 												== INVALID_HANDLE_VALUE) {
 			return false;
