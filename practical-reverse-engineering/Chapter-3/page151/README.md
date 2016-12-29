@@ -21,4 +21,5 @@
 		- [ ] MiInitializePrefetchHead
 		- [ ] PspAllocateProcess
 		- [ ] PspAllocateThread
+
 Identify where InitializeListHead is inlined in these routines
