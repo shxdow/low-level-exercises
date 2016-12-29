@@ -22,10 +22,10 @@
      - [x] KeInitializeApc
      - [ ] ObFastDereferenceObject (and explain its calling convention)
      - [x] KeInitializeQueue
-     - [-] KxWaitForLockChainValid
+     - [ ] KxWaitForLockChainValid
      - [x] KeReadyThread
      - [x] KiInitializeTSS
-     - [-] RtlValidateUnicodeString
+     - [ ] RtlValidateUnicodeString
 
 6. - [x] Sample H. The function sub_13846 references several structures whose
    types are not entirely clear. Your task is to first recover the function
