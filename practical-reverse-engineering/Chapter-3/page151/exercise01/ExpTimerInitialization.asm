@@ -9,8 +9,8 @@ fffff800`12338643 488d05260cbdff  lea     rax,[nt!ExpWakeTimerList (fffff800`11f
 fffff800`1233864a 488d151ff10300  lea     rdx,[nt! ?? ::PBOPGDP::`string' (fffff800`12377770)]
 fffff800`12338651 488d4dc7        lea     rcx,[rbp-39h]
 fffff800`12338655 33db            xor     ebx,ebx
-fffff800`12338657 4889051a0cbdff  mov     qword ptr [nt!ExpWakeTimerList+0x8 (fffff800`11f09278)],rax
-fffff800`1233865e 4889050b0cbdff  mov     qword ptr [nt!ExpWakeTimerList (fffff800`11f09270)],rax
+fffff800`12338657 4889051a0cbdff  mov     qword ptr [nt!ExpWakeTimerList+0x8 (fffff800`11f09278)],rax	; InitializeListHead
+fffff800`1233865e 4889050b0cbdff  mov     qword ptr [nt!ExpWakeTimerList (fffff800`11f09270)],rax		; InitializeListHead
 fffff800`12338665 48891d140cbdff  mov     qword ptr [nt!ExpWakeTimerLock (fffff800`11f09280)],rbx
 fffff800`1233866c e8af469fff      call    nt!RtlInitUnicodeString (fffff800`11d2cd20)
 fffff800`12338671 8d7b78          lea     edi,[rbx+78h]

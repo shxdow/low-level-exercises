@@ -10,8 +10,8 @@ fffff800`12344168 488d0d0959bcff  lea     rcx,[nt!ExpEnvironmentLock+0x18 (fffff
 fffff800`1234416f 8d5301          lea     edx,[rbx+1]
 fffff800`12344172 4533c0          xor     r8d,r8d
 fffff800`12344175 48c7059859bcff00a69dfd mov qword ptr [nt!ExpTimeout (fffff800`11f09b18)],0FFFFFFFFFD9DA600h
-fffff800`12344180 488905a159bcff  mov     qword ptr [nt!ExpSystemResourcesList+0x8 (fffff800`11f09b28)],rax
-fffff800`12344187 4889059259bcff  mov     qword ptr [nt!ExpSystemResourcesList (fffff800`11f09b20)],rax
+fffff800`12344180 488905a159bcff  mov     qword ptr [nt!ExpSystemResourcesList+0x8 (fffff800`11f09b28)],rax				; InitalizeListHead
+fffff800`12344187 4889059259bcff  mov     qword ptr [nt!ExpSystemResourcesList (fffff800`11f09b20)],rax					; InitalizeListHead
 fffff800`1234418e c705c858bcff01000000 mov dword ptr [nt!ExpEnvironmentLock (fffff800`11f09a60)],1
 fffff800`12344198 48891dc958bcff  mov     qword ptr [nt!ExpEnvironmentLock+0x8 (fffff800`11f09a68)],rbx
 fffff800`1234419f 891dcb58bcff    mov     dword ptr [nt!ExpEnvironmentLock+0x10 (fffff800`11f09a70)],ebx
@@ -19,14 +19,14 @@ fffff800`123441a5 e8e61c9eff      call    nt!KeInitializeEvent (fffff800`11d25e9
 fffff800`123441aa 488d05ff58bcff  lea     rax,[nt!ExPagedLookasideListHead (fffff800`11f09ab0)]
 fffff800`123441b1 488d15e858bcff  lea     rdx,[nt!ExNPagedLookasideListHead (fffff800`11f09aa0)]
 fffff800`123441b8 488d0d8159bcff  lea     rcx,[nt!ExpFirmwareTableResource (fffff800`11f09b40)]
-fffff800`123441bf 488905f258bcff  mov     qword ptr [nt!ExPagedLookasideListHead+0x8 (fffff800`11f09ab8)],rax
-fffff800`123441c6 488905e358bcff  mov     qword ptr [nt!ExPagedLookasideListHead (fffff800`11f09ab0)],rax
+fffff800`123441bf 488905f258bcff  mov     qword ptr [nt!ExPagedLookasideListHead+0x8 (fffff800`11f09ab8)],rax			; InitalizeListHead
+fffff800`123441c6 488905e358bcff  mov     qword ptr [nt!ExPagedLookasideListHead (fffff800`11f09ab0)],rax				; InitalizeListHead
 fffff800`123441cd 488d05dc59bcff  lea     rax,[nt!ExpFirmwareTableProviderListHead (fffff800`11f09bb0)]
-fffff800`123441d4 488915cd58bcff  mov     qword ptr [nt!ExNPagedLookasideListHead+0x8 (fffff800`11f09aa8)],rdx
-fffff800`123441db 488915be58bcff  mov     qword ptr [nt!ExNPagedLookasideListHead (fffff800`11f09aa0)],rdx
+fffff800`123441d4 488915cd58bcff  mov     qword ptr [nt!ExNPagedLookasideListHead+0x8 (fffff800`11f09aa8)],rdx			; InitalizeListHead
+fffff800`123441db 488915be58bcff  mov     qword ptr [nt!ExNPagedLookasideListHead (fffff800`11f09aa0)],rdx				; InitalizeListHead
 fffff800`123441e2 48891dd758bcff  mov     qword ptr [nt!ExNPagedLookasideLock (fffff800`11f09ac0)],rbx
-fffff800`123441e9 488905c859bcff  mov     qword ptr [nt!ExpFirmwareTableProviderListHead+0x8 (fffff800`11f09bb8)],rax
-fffff800`123441f0 488905b959bcff  mov     qword ptr [nt!ExpFirmwareTableProviderListHead (fffff800`11f09bb0)],rax
+fffff800`123441e9 488905c859bcff  mov     qword ptr [nt!ExpFirmwareTableProviderListHead+0x8 (fffff800`11f09bb8)],rax	; InitializeListHead
+fffff800`123441f0 488905b959bcff  mov     qword ptr [nt!ExpFirmwareTableProviderListHead (fffff800`11f09bb0)],rax		; InitializeListHead
 fffff800`123441f7 48891de258bcff  mov     qword ptr [nt!ExPagedLookasideLock (fffff800`11f09ae0)],rbx
 fffff800`123441fe e8cdd49eff      call    nt!ExInitializeResourceLite (fffff800`11d316d0)
 fffff800`12344203 833de67efdff07  cmp     dword ptr [nt!CmSuiteBufferType (fffff800`1231c0f0)],7

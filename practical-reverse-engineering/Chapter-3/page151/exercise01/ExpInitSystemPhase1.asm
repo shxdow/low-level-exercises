@@ -12,8 +12,8 @@ fffff800`123695ef e89cc3dfff      call    nt!RtlInitializeAtomPackage (fffff800`
 fffff800`123695f4 e8bfe5fcff      call    nt!ExpInitializePushLocks (fffff800`12337bb8)
 fffff800`123695f9 488d053003baff  lea     rax,[nt!ExpHostList (fffff800`11f09930)]
 fffff800`12369600 33ed            xor     ebp,ebp
-fffff800`12369602 4889052f03baff  mov     qword ptr [nt!ExpHostList+0x8 (fffff800`11f09938)],rax
-fffff800`12369609 4889052003baff  mov     qword ptr [nt!ExpHostList (fffff800`11f09930)],rax
+fffff800`12369602 4889052f03baff  mov     qword ptr [nt!ExpHostList+0x8 (fffff800`11f09938)],rax		; InitializeListHead
+fffff800`12369609 4889052003baff  mov     qword ptr [nt!ExpHostList (fffff800`11f09930)],rax			; InitializeListHead
 fffff800`12369610 48892d0903baff  mov     qword ptr [nt!ExpHostListLock (fffff800`11f09920)],rbp
 fffff800`12369617 48892d2a06baff  mov     qword ptr [nt!ExpKeyManipLock (fffff800`11f09c48)],rbp
 fffff800`1236961e 48892da305baff  mov     qword ptr [nt!ExpPlatformBinaryLock (fffff800`11f09bc8)],rbp
