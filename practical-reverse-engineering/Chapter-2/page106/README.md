@@ -12,15 +12,22 @@
 		 07: 70 47         BX              LR
 		 08:             ; End of function mystery3
 4. - [x] Figure 2-10 shows another easy function.
+
 5. - [x] Figure 2-11 is simple as well. The actual string names have been removed 
 		 so you cannot cheat by searching the Internet.
+
 6. - [x] Figure 2-12 involves some twiddling.
+
 7. - [x] Figure 2-13 illustrates a common routine, but you may not have seen it 
 		 implemented this way.
+
 8. - [x] In Figure 2-14, byteArray is a 256-character array whose content is
 		 byte-Array[] = {0, 1, ..., 0xff}.
+
 9. - [x] What does the function shown in Figure 2-15 do?
+
 10. - [x] Figure 2-16 is a function from Windows RT. Read MSDN if needed. Ignore 
 		  the security PUSH/POP cookie routines.
+
 11. - [ ] In Figure 2-17, sub_101651C takes three arguments and returns nothing. 
 		  If you complete this exercise, you should pat yourself on the back.
