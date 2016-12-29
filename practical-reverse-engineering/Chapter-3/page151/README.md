@@ -12,14 +12,14 @@
 		- [x] IoInitializeIrp
 		- [x] KeInitThread
 		- [x] KeInitializeMutex
-		- [ ] KeInitializeProcess
-		- [ ] KeInitializeTimerEx
-		- [ ] KeInitializeTimerTable
-		- [ ] KiInitializeProcessor
-		- [ ] KiInitializeThread
-		- [ ] MiInitializeLoadedModuleList
-		- [ ] MiInitializePrefetchHead
-		- [ ] PspAllocateProcess
+		- [x] KeInitializeProcess
+		- [x] KeInitializeTimerEx
+		- [x] KeInitializeTimerTable
+		- [x] KiInitializeProcessor
+		- [x] KiInitializeThread
+		- [x] MiInitializeLoadedModuleList
+		- [x] MiInitializePrefetchHead
+		- [x] PspAllocateProcess
 		- [ ] PspAllocateThread
 
 Identify where InitializeListHead is inlined in these routines
