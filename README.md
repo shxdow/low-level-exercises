@@ -12,3 +12,9 @@ engineering and low level things.
 
 Any sort of contribution is welcome as I'm likely to have missed something
 along the road.
+
+#
+
+### License ###
+
+Copyright (c) 2016 shxdow
