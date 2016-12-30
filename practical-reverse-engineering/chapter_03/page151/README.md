@@ -22,4 +22,21 @@
 		- [x] PspAllocateProcess
 		- [ ] PspAllocateThread
 
-Identify where InitializeListHead is inlined in these routines
+	Identify where InitializeListHead is inlined in these routines
+
+2. - [ ]  Repeat the previous exercise for InsertHeadList in the
+		  following routines:
+
+		- [x] CcSetVacbInFreeList
+		- [x] CmpDoSort
+		- [x] ExBurnMemory
+		- [x] ExFreePoolWithTag
+		- [x] IoPageRead
+		- [ ] IovpCallDriver1
+		- [ ] KeInitThread
+		- [ ] KiInsertQueueApc
+		- [ ] KeInsertQueueDpc
+		- [ ] KiQueueReadyThread
+		- [ ] MiInsertInSystemSpace
+		- [ ] MiUpdateWsle
+		- [ ] ObpInsertCallbackByAltitude
