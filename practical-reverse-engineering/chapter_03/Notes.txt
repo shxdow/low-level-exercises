@@ -34,7 +34,7 @@
     ___________________________________________________________________________
 
 	Syscalls can be implemented by usign either having a dedicated int code
-	(0x2e) a trap instructions (SYSENTER/SYSEXIT).
+	(0x2e) or a trap instructions (SYSENTER/SYSEXIT).
 
 
 5.	Explain IRQL
