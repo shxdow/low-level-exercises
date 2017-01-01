@@ -34,9 +34,9 @@
 		- [x] IoPageRead
 		- [x] IovpCallDriver1
 		- [x] KeInitThread
-		- [ ] KiInsertQueueApc
-		- [ ] KeInsertQueueDpc
-		- [ ] KiQueueReadyThread
+		- [x] KiInsertQueueApc
+		- [x] KeInsertQueueDpc
+		- [x] KiQueueReadyThread
 		- [ ] MiInsertInSystemSpace
 		- [ ] MiUpdateWsle
 		- [ ] ObpInsertCallbackByAltitude
