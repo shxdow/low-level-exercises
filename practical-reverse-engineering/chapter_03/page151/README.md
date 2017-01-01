@@ -32,7 +32,7 @@
 		- [x] ExBurnMemory
 		- [x] ExFreePoolWithTag
 		- [x] IoPageRead
-		- [ ] IovpCallDriver1
+		- [x] IovpCallDriver1
 		- [ ] KeInitThread
 		- [ ] KiInsertQueueApc
 		- [ ] KeInsertQueueDpc
