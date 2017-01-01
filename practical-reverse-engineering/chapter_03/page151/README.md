@@ -33,7 +33,7 @@
 		- [x] ExFreePoolWithTag
 		- [x] IoPageRead
 		- [x] IovpCallDriver1
-		- [ ] KeInitThread
+		- [x] KeInitThread
 		- [ ] KiInsertQueueApc
 		- [ ] KeInsertQueueDpc
 		- [ ] KiQueueReadyThread
