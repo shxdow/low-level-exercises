@@ -38,5 +38,43 @@
 		- [x] KeInsertQueueDpc
 		- [x] KiQueueReadyThread
 		- [ ] MiInsertInSystemSpace
-		- [ ] MiUpdateWsle
-		- [ ] ObpInsertCallbackByAltitude
+		- [x] MiUpdateWsle
+		- [x] ObpInsertCallbackByAltitude
+
+3. - [ ]  Repeat the previous exercise for InsertTailList in the
+		  following routines:
+
+	  	- [ ] AlpcpCreateClientPort
+	  	- [ ] AlpcpCreateSection
+	  	- [ ] AlpcpCreateView
+	  	- [ ] AuthzBasepAddSecurityAttributeToLists
+	  	- [ ] CcFlushCachePriv
+		- [ ] CcInitializeCacheManager
+		- [ ] CcInsertVacbArray
+		- [ ] CcSetFileSizesEx
+		- [ ] CmRenameKey
+		- [ ] ExAllocatePoolWithTag
+		- [ ] ExFreePoolWithTag
+		- [ ] ExQueueWorkItem
+		- [ ] ExRegisterCallback
+		- [ ] ExpSetTimer
+		- [ ] IoSetIoCompletionEx2
+		- [ ] KeInsertQueueDpc
+		- [ ] KeStartThread
+		- [ ] KiAddThreadToScbQueue
+		- [ ] KiInsertQueueApc
+		- [ ] KiQueueReadyThread
+		- [ ] MiInsertNewProcess
+		- [ ] PnpRequestDeviceAction
+		- [ ] PspInsertProcess
+		- [ ] PspInsertThread
+
+
+
+
+
+
+
+
+
+
