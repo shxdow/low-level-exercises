@@ -44,14 +44,14 @@
 3. - [ ]  Repeat the previous exercise for InsertTailList in the
 		  following routines:
 
-	  	- [ ] AlpcpCreateClientPort
-	  	- [ ] AlpcpCreateSection
-	  	- [ ] AlpcpCreateView
-	  	- [ ] AuthzBasepAddSecurityAttributeToLists
-	  	- [ ] CcFlushCachePriv
-		- [ ] CcInitializeCacheManager
-		- [ ] CcInsertVacbArray
-		- [ ] CcSetFileSizesEx
+	  	- [x] AlpcpCreateClientPort
+	  	- [x] AlpcpCreateSection
+	  	- [x] AlpcpCreateView
+	  	- [x] AuthzBasepAddSecurityAttributeToLists
+	  	- [x] CcFlushCachePriv
+		- [x] CcInitializeCacheManager
+		- [x] CcInsertVacbArray
+		- [x] CcSetFileSizesEx
 		- [ ] CmRenameKey
 		- [ ] ExAllocatePoolWithTag
 		- [ ] ExFreePoolWithTag
