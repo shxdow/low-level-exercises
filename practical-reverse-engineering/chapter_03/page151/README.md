@@ -41,7 +41,7 @@
 		- [x] MiUpdateWsle
 		- [x] ObpInsertCallbackByAltitude
 
-3. - [ ]  Repeat the previous exercise for InsertTailList in the
+3. - [x]  Repeat the previous exercise for InsertTailList in the
 		  following routines:
 
 	  	- [x] AlpcpCreateClientPort
@@ -52,22 +52,22 @@
 		- [x] CcInitializeCacheManager
 		- [x] CcInsertVacbArray
 		- [x] CcSetFileSizesEx
-		- [ ] CmRenameKey
-		- [ ] ExAllocatePoolWithTag
-		- [ ] ExFreePoolWithTag
-		- [ ] ExQueueWorkItem
-		- [ ] ExRegisterCallback
-		- [ ] ExpSetTimer
-		- [ ] IoSetIoCompletionEx2
-		- [ ] KeInsertQueueDpc
-		- [ ] KeStartThread
-		- [ ] KiAddThreadToScbQueue
-		- [ ] KiInsertQueueApc
-		- [ ] KiQueueReadyThread
-		- [ ] MiInsertNewProcess
-		- [ ] PnpRequestDeviceAction
-		- [ ] PspInsertProcess
-		- [ ] PspInsertThread
+		- [x] CmRenameKey
+		- [x] ExAllocatePoolWithTag
+		- [x] ExFreePoolWithTag
+		- [x] ExQueueWorkItem
+		- [x] ExRegisterCallback
+		- [x] ExpSetTimer
+		- [x] IoSetIoCompletionEx2
+		- [x] KeInsertQueueDpc
+		- [x] KeStartThread
+		- [x] KiAddThreadToScbQueue
+		- [x] KiInsertQueueApc
+		- [x] KiQueueReadyThread
+		- [x] MiInsertNewProcess
+		- [x] PnpRequestDeviceAction
+		- [x] PspInsertProcess
+		- [x] PspInsertThread
 
 
 
