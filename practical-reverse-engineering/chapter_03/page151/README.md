@@ -69,7 +69,21 @@
 		- [x] PspInsertProcess
 		- [x] PspInsertThread
 
+4. - [ ] Repeat the previous exercise for RemoveHeadList
+		 in the following routines:
 
+		- [ ] AlpcpFlushResourcesPort
+		- [ ] CcDeleteMbcb
+		- [ ] CcGetVacbMiss
+		- [ ] CmpLazyCommitWorker
+		- [ ] ExAllocatePoolWithTag
+		- [ ] FsRtlNotifyCompleteIrpList
+		- [ ] IopInitializeBootDrivers
+		- [ ] KiProcessDisconnectList
+		- [ ] PnpDeviceCompletionQueueGetCompletedRequest
+		- [ ] RtlDestroyAtomTable
+		- [ ] RtlEmptyAtomTable
+		- [ ] RtlpFreeAllAto
 
 
 
