@@ -72,18 +72,18 @@
 4. - [ ] Repeat the previous exercise for RemoveHeadList
 		 in the following routines:
 
-		- [ ] AlpcpFlushResourcesPort
-		- [ ] CcDeleteMbcb
-		- [ ] CcGetVacbMiss
-		- [ ] CmpLazyCommitWorker
-		- [ ] ExAllocatePoolWithTag
-		- [ ] FsRtlNotifyCompleteIrpList
+		- [x] AlpcpFlushResourcesPort
+		- [x] CcDeleteMbcb
+		- [x] CcGetVacbMiss
+		- [x] CmpLazyCommitWorker
+		- [x] ExAllocatePoolWithTag
+		- [x] FsRtlNotifyCompleteIrpList
 		- [ ] IopInitializeBootDrivers
-		- [ ] KiProcessDisconnectList
-		- [ ] PnpDeviceCompletionQueueGetCompletedRequest
-		- [ ] RtlDestroyAtomTable
-		- [ ] RtlEmptyAtomTable
-		- [ ] RtlpFreeAllAto
+		- [x] KiProcessDisconnectList
+		- [x] PnpDeviceCompletionQueueGetCompletedRequest
+		- [x] RtlDestroyAtomTable
+		- [x] RtlEmptyAtomTable
+		- [x] RtlpFreeAllAto
 
 
 
