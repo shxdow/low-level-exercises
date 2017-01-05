@@ -85,7 +85,14 @@
 		- [x] RtlEmptyAtomTable
 		- [x] RtlpFreeAllAto
 
+5. - [ ] Repeat the previous exercise for RemoveTailList
+		 in the following routines:
 
+		- [ ] BootApplicationPersistentDataProcess
+		- [ ] CmpCallCallBacks
+		- [ ] CmpDelayCloseWorker
+		- [ ] ObpCallPostOperationCallbacks
+		- [ ] RaspAddCacheEntry
 
 
 
