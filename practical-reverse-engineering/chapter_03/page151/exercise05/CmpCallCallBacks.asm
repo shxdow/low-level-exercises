@@ -113,8 +113,8 @@ fffff803`d9d617be 483930          cmp     qword ptr [rax],rsi
 fffff803`d9d617c1 0f85b3450f00    jne     nt! ?? ::NNGAKEGL::`string'+0x55cf (fffff803`d9e55d7a)
 
 nt!CmpCallCallBacks+0x187:
-fffff803`d9d617c7 4c8900          mov     qword ptr [rax],r8
-fffff803`d9d617ca 4c894608        mov     qword ptr [rsi+8],r8
+fffff803`d9d617c7 4c8900          mov     qword ptr [rax],r8					; rax->Flink = r8
+fffff803`d9d617ca 4c894608        mov     qword ptr [rsi+8],r8					; rsi->Blink = r8
 fffff803`d9d617ce 4d8d4618        lea     r8,[r14+18h]
 fffff803`d9d617d2 498bd5          mov     rdx,r13
 fffff803`d9d617d5 418bcf          mov     ecx,r15d

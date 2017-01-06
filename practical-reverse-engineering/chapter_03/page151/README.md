@@ -89,10 +89,10 @@
 		 in the following routines:
 
 		- [ ] BootApplicationPersistentDataProcess
-		- [ ] CmpCallCallBacks
+		- [x] CmpCallCallBacks
 		- [ ] CmpDelayCloseWorker
-		- [ ] ObpCallPostOperationCallbacks
-		- [ ] RaspAddCacheEntry
+		- [x] ObpCallPostOperationCallbacks
+		- [x] RaspAddCacheEntry
 
 
 
