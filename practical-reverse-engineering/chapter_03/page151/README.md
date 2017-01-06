@@ -123,18 +123,18 @@
 		- [x] KeRemoveQueueApc
 		- [x] KeRemoveQueueDpc
 		- [x] KiCancelTimer
-		- [ ] KeTerminateThread
-		- [ ] KiDeliverApc
-		- [ ] KiExecuteAllDpcs
-		- [ ] KiExpireTimerTable
-		- [ ] KiFindReadyThread
-		- [ ] KiFlushQueueApc
-		- [ ] KiInsertTimerTable
-		- [ ] KiProcessExpiredTimerList
+		- [x] KeTerminateThread
+		- [x] KiDeliverApc
+		- [x] KiExecuteAllDpcs
+		- [x] KiExpireTimerTable
+		- [x] KiFindReadyThread
+		- [x] KiFlushQueueApc
+		- [x] KiInsertTimerTable
+		- [x] KiProcessExpiredTimerList
 		- [ ] MiDeleteVirtualAddresses
-		- [ ] NtNotifyChangeMultipleKeys
-		- [ ] ObRegisterCallbacks
-		- [ ] ObUnRegisterCallbacks
+		- [x] NtNotifyChangeMultipleKeys
+		- [x] ObRegisterCallbacks
+		- [x] ObUnRegisterCallbacks
 
 7. - [ ] Repeat the previous exercises on Windows 8 x86/ARM and Windows 7 
 		 x86/x64. What were the differences (if any)?
