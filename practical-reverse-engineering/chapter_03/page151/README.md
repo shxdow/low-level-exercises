@@ -100,17 +100,17 @@
 		- [x] AlpcSectionDeleteProcedure
 		- [ ] AlpcpDeletePort
 		- [x] AlpcpUnregisterCompletionListDatabase
-		- [ ] AuthzBasepRemoveSecurityAttributeFromLists
-		- [ ] CcDeleteBcbs
-		- [ ] CcFindNextWorkQueueEntry
-		- [ ] CcLazyWriteScan
-		- [ ] CcSetFileSizesEx
-		- [ ] CmShutdownSystem
-		- [ ] CmUnRegisterCallback
-		- [ ] CmpCallCallBacks
-		- [ ] CmpPostApc
-		- [ ] ExFreePoolWithTag
-		- [ ] ExQueueWorkItem
+		- [x] AuthzBasepRemoveSecurityAttributeFromLists
+		- [x] CcDeleteBcbs
+		- [x] CcFindNextWorkQueueEntry
+		- [x] CcLazyWriteScan
+		- [x] CcSetFileSizesEx
+		- [x] CmShutdownSystem
+		- [x] CmUnRegisterCallback
+		- [x] CmpCallCallBacks
+		- [x] CmpPostApc
+		- [x] ExFreePoolWithTag
+		- [x] ExQueueWorkItem
 		- [ ] ExTimerRundown
 		- [ ] ExpDeleteTimer
 		- [ ] ExpSetTimer
@@ -158,3 +158,8 @@
 		 function handling this request (and others) is fairly large, so you
 		 will need some patience. Alternatively, you can use a debugger to help
 		 you trace the interesting code.
+
+10. - [ ] Explain how the following functions work: KeInsertQueueDpc,
+		  KiRetireDpcList, KiExecuteDpc, and KiExecuteAllDpcs. If you feel like 
+		  an overachiever, decompile those functions from the x86 and x64 assem-
+		  blies and explain the differences.
