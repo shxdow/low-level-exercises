@@ -111,18 +111,18 @@
 		- [x] CmpPostApc
 		- [x] ExFreePoolWithTag
 		- [x] ExQueueWorkItem
-		- [ ] ExTimerRundown
-		- [ ] ExpDeleteTimer
-		- [ ] ExpSetTimer
-		- [ ] IoDeleteDevice
-		- [ ] IoUnregisterFsRegistrationChange
-		- [ ] IopfCompleteRequest
-		- [ ] KeDeregisterBugCheckCallback
-		- [ ] KeDeregisterObjectNotification
-		- [ ] KeRegisterObjectNotification
-		- [ ] KeRemoveQueueApc
-		- [ ] KeRemoveQueueDpc
-		- [ ] KiCancelTimer
+		- [x] ExTimerRundown
+		- [x] ExpDeleteTimer
+		- [x] ExpSetTimer
+		- [x] IoDeleteDevice
+		- [x] IoUnregisterFsRegistrationChange
+		- [x] IopfCompleteRequest
+		- [x] KeDeregisterBugCheckCallback
+		- [x] KeDeregisterObjectNotification
+		- [x] KeRegisterObjectNotification
+		- [x] KeRemoveQueueApc
+		- [x] KeRemoveQueueDpc
+		- [x] KiCancelTimer
 		- [ ] KeTerminateThread
 		- [ ] KiDeliverApc
 		- [ ] KiExecuteAllDpcs
@@ -161,5 +161,5 @@
 
 10. - [ ] Explain how the following functions work: KeInsertQueueDpc,
 		  KiRetireDpcList, KiExecuteDpc, and KiExecuteAllDpcs. If you feel like 
-		  an overachiever, decompile those functions from the x86 and x64 assem-
-		  blies and explain the differences.
+		  an overachiever, decompile those functions from the x86 and x64
+		  assemblies and explain the differences.
