@@ -5,7 +5,7 @@ BOOLEAN KeInsertQueueDpc(
 )
 {
 	KIRQL oldIRQL;
-	PRCB CpuPRCB;
+	PRCB CpuPRCB, otherPRCB;
 	
 	KeRaiseIrql(0x1F, &oldIRQL);
 
@@ -13,17 +13,19 @@ BOOLEAN KeInsertQueueDpc(
 	CpuPRCB = KeGetCurrentPrcb();
 	
 	// line 16 - 17
-	// wat Dpc.Type = CpuPRCB.DpcLock;
-	= CpuPRCB.DpcLock;
+	// CpuPRCB.DpcLock wat?
+	// Locks stuff
+	KeAcquireSpinLock(&CpuPRCB.DpcLock);
 	
 	// line 18 retrives the _KPRCB+0x1C (wat)
-	CpuPRCB.MinorVersion = CpuPRCB.ProcessorState;
 	
-	// line 23
+	// line 23 (this is 100% bs by me)
+	// there must be another PRCB structure that I'm missing
 	if (CpuPRCB == 0) {
-		CpuPRCB = Dpc;
+		// CpuPRCB = Dpc;
+		CpuPRCB	= otherPRCB;
 	}
-	else if (Dpc == 0) {
+	else if (== 0) {
 		++CpuPRCB.DpcCount;
 		++CpuPRCB.DpcQueueDepth;
 		
@@ -33,7 +35,7 @@ BOOLEAN KeInsertQueueDpc(
 		// line 34 - 35
 		CpuPRCB.CpuType = Dpc.DefferedRoutine;
 		
-		// line 31 is clearly checking if a (nvm
+		// line 31 is clearly checking if a (wat?)
 		if (CpuPRCB.MajorVersion == 2) {
 			// CpuPRCB.CurrentThread = CpuPRCB.DpcListHead;
 			InsertTailList(CpuPRCB.DpcListHead, Dpc.DpcListEntry);
@@ -58,12 +60,11 @@ BOOLEAN KeInsertQueueDpc(
 		}
 	}
 	
-	// If stuff is ok / failed (I think it's a fail case)
+	// If stuff failed (I think it's a fail case)
 	KeLowerIrql(&oldIRQL);
 	
 	if (CpuPRCB == 0) {
 		return FALSE;
 	}
-	
 	return TRUE;
 }
