@@ -63,3 +63,14 @@
 	relevant to the process.
 
 	doubt 1: Are they 'relevant' for the reverse engineers?
+
+
+8.	Explain what a work item is 
+    ___________________________________________________________________________
+
+	Worker threads are kernel mode threads executed on behalf of the
+	caller. 
+
+
+
+
