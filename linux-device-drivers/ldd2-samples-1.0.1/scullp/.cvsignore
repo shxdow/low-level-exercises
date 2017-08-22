@@ -1,7 +1,0 @@
-Makefile
-main.c
-mmap.c
-scullp.h
-scullp_load
-scullp_unload
-.depend
