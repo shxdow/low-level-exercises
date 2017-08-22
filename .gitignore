@@ -2,3 +2,4 @@ icon.png
 *.epub
 .bat
 *.*~
+linux-device-drivers/chapter_*
