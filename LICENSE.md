@@ -1,6 +1,6 @@
 BSD 2-Clause License
 
-Copyright (c) 2016-2017, shxdow
+Copyright (c) 2016-2017, shxdow  
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
