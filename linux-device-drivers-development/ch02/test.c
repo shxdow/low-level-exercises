@@ -12,9 +12,7 @@ struct node {
 
 static int __init hello_init(void) {
 
-    struct node *my_list = kzalloc(sizeof(struct node), GFP_KERNEL);
-    INIT_LIST_HEAD(&my_list->list);
-
+    pr_debug("entering kernel land");
     return 0;
 }
 
